@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MaterialFlow Lite",
-  description: "Mobile-first material visualizer",
+  title: "Primacy Lite",
+  description: "Mobile-first PBR material & color visualizer for interior designers",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

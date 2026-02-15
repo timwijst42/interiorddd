@@ -3,11 +3,11 @@
 @theme {
   --color-background: #ffffff;
   --color-foreground: #171717;
-  
+
   /* Mobile optimized colors */
   --color-primary: #000000;
   --color-secondary: #f5f5f5;
-  --color-accent: #3b82f6; 
+  --color-accent: #3b82f6;
 }
 
 /* Dark mode overrides (optional for MVP but good to have) */
@@ -26,12 +26,15 @@
 @utility pb-safe {
   padding-bottom: env(safe-area-inset-bottom);
 }
+
 @utility pt-safe {
   padding-top: env(safe-area-inset-top);
 }
+
 @utility pl-safe {
   padding-left: env(safe-area-inset-left);
 }
+
 @utility pr-safe {
   padding-right: env(safe-area-inset-right);
 }
@@ -42,8 +45,18 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     user-select: none;
-    overscroll-behavior-y: none; /* Prevention of pull-to-refresh if not handled */
+    overscroll-behavior-y: none;
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+}
+
+/* Hide scrollbar but keep scrolling */
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

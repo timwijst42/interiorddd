@@ -6,7 +6,7 @@ import { BottomNav } from "./BottomNav"
 import { MaterialPanel } from "./MaterialPanel"
 import { ColorPanel } from "./ColorPanel"
 import { ObjectPanel } from "./ObjectPanel"
-import { ScreenshotButton } from "./ScreenshotButton"
+import { ComparePanel } from "./ComparePanel"
 import { AnimatePresence } from "framer-motion"
 
 export function MobileInterface({ children }: { children: React.ReactNode }) {
@@ -23,7 +23,6 @@ export function MobileInterface({ children }: { children: React.ReactNode }) {
             <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-between">
                 <div className="pointer-events-auto">
                     <TopBar />
-                    <ScreenshotButton />
                 </div>
 
                 <div className="relative pointer-events-auto">
@@ -31,6 +30,7 @@ export function MobileInterface({ children }: { children: React.ReactNode }) {
                         {activePanel === 'materials' && <MaterialPanel key="materials" />}
                         {activePanel === 'colors' && <ColorPanel key="colors" />}
                         {activePanel === 'objects' && <ObjectPanel key="objects" />}
+                        {activePanel === 'compare' && <ComparePanel key="compare" />}
                     </AnimatePresence>
 
                     <BottomNav />
